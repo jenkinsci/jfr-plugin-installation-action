@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v2
       - name : Setup Jenkins
         uses:
-          Cr1t-GYM/jenkins-action-poc/jenkins-setup@master
+          jenkinsci/jfr-setup-action@master
       - name: Jenkins plugins download
         id: jenkins_plugins_download
         uses:
@@ -30,7 +30,7 @@ jobs:
       - name: Run Jenkins pipeline
         id: run_jenkins_pipeline
         uses:
-          Cr1t-GYM/jenkins-action-poc/jenkinsfile-runner-action@master
+          jenkinsci/jfr-runtime-action@master
         with:
           command: run
           jenkinsfile: Jenkinsfile
